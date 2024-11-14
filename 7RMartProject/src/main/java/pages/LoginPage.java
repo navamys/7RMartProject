@@ -20,6 +20,8 @@ public class LoginPage{  //page class also called element repo(have methods and 
 	@FindBy(xpath="//input[@name='password']") private WebElement password;
 	@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
 	@FindBy(xpath="//p[text()='Dashboard']") private WebElement dashboard;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") private WebElement alertmessage;
+	
 	
 	
 	public void enterUsernameOnUsernameField(String usernamepassing) {
@@ -36,9 +38,7 @@ public class LoginPage{  //page class also called element repo(have methods and 
 		return dashboard.isDisplayed();
 	}
 	public boolean isAlertDisplayed() {
-		String alerttext=driver.switchTo().alert().getText();
-		System.out.println(alerttext);
-		return alerttext.equalsIgnoreCase("Invalid Username/Password");
+		return alertmessage.isDisplayed();
 	}
 	
 }
