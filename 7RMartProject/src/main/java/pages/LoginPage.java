@@ -33,7 +33,6 @@ public class LoginPage{  //page class also called element repo(have methods and 
 	public void clickOnSigninButton() {
 		signinbutton.click();
 	}	
-	
 	public boolean isHomePageDisplayed() {
 		return dashboard.isDisplayed();
 	}

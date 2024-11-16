@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.script.LoginTest">
+      <class name="test.script.AdminuserTest">
         <methods>
           <include name="driverQuitAndClose"/>
-          <include name="verifyTheUserIsAbleToLoginUsingIncorrectCredentials"/>
           <include name="initializeBrowser"/>
-          <include name="verifyTheUserIsAbleToLoginUsingValidUsernameAndIncorrectPassword"/>
-          <include name="verifyTheUserIsAbleToLoginUsingIncorrectUsernameAndValidPassword"/>
+          <include name="updateAllFields"/>
         </methods>
-      </class> <!-- test.script.LoginTest -->
+      </class> <!-- test.script.AdminuserTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
