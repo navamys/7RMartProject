@@ -41,9 +41,11 @@ public class AdminuserPage {
 		updateicon.click();
 	}
 	public void enterValueToBeUpdatedOnUsernameField(String usernameupdatepassing) {
+		usernameupdate.clear();
 		usernameupdate.sendKeys(usernameupdatepassing);
 	}
 	public void enterValueToBeUpdatedOnPasswordField(String passwordupdatepassing) {
+		passwordupdate.clear();
 		passwordupdate.sendKeys(passwordupdatepassing);
 	}
 	public void selectValueOnUsertypeField(int passingusertypeindex) {

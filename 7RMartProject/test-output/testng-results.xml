@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-16T13:59:43 ICT" name="Default suite" finished-at="2024-11-16T13:59:49 ICT" duration-ms="6538">
+  <suite started-at="2024-11-16T14:04:26 ICT" name="Default suite" finished-at="2024-11-16T14:04:31 ICT" duration-ms="4345">
     <groups>
     </groups>
-    <test started-at="2024-11-16T13:59:43 ICT" name="Default test" finished-at="2024-11-16T13:59:49 ICT" duration-ms="6538">
+    <test started-at="2024-11-16T14:04:26 ICT" name="Default test" finished-at="2024-11-16T14:04:31 ICT" duration-ms="4345">
       <class name="test.script.AdminuserTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:test.script.AdminuserTest@5d534f5d]" started-at="2024-11-16T13:59:43 ICT" name="initializeBrowser" finished-at="2024-11-16T13:59:46 ICT" duration-ms="3481" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:test.script.AdminuserTest@5d534f5d]" started-at="2024-11-16T14:04:26 ICT" name="initializeBrowser" finished-at="2024-11-16T14:04:28 ICT" duration-ms="2301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="updateAllFields()[pri:0, instance:test.script.AdminuserTest@5d534f5d]" started-at="2024-11-16T13:59:46 ICT" name="updateAllFields" finished-at="2024-11-16T13:59:49 ICT" duration-ms="3025" status="PASS">
+        <test-method signature="updateAllFields()[pri:0, instance:test.script.AdminuserTest@5d534f5d]" started-at="2024-11-16T14:04:28 ICT" name="updateAllFields" finished-at="2024-11-16T14:04:30 ICT" duration-ms="2010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateAllFields -->
-        <test-method is-config="true" signature="driverQuitAndClose()[pri:0, instance:test.script.AdminuserTest@5d534f5d]" started-at="2024-11-16T13:59:49 ICT" name="driverQuitAndClose" finished-at="2024-11-16T13:59:49 ICT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="driverQuitAndClose()[pri:0, instance:test.script.AdminuserTest@5d534f5d]" started-at="2024-11-16T14:04:31 ICT" name="driverQuitAndClose" finished-at="2024-11-16T14:04:31 ICT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuitAndClose -->
