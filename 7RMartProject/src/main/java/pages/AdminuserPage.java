@@ -17,8 +17,8 @@ public class AdminuserPage {
 	@FindBy(xpath="//input[@name='password']") private WebElement loginpassword;
 	@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
 	
-	@FindBy(css="a.small-box-footer[href=\"https://groceryapp.uniqassosiates.com/admin/list-admin\"]")private WebElement moreinfobutton;
-	@FindBy(xpath="//a[@href=\"https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10728&page_ad=1\"]")private WebElement updateicon;
+	@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-admin']")private WebElement moreinfobutton;
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10738&page_ad=1']")private WebElement updateicon;
 	@FindBy(xpath="//input[@id='username']")private WebElement usernameupdate;
 	@FindBy(xpath="//input[@id='password']")private WebElement passwordupdate;
 	@FindBy(xpath="//select[@id='user_type']")private WebElement usertypeupdate;
@@ -48,9 +48,15 @@ public class AdminuserPage {
 		passwordupdate.clear();
 		passwordupdate.sendKeys(passwordupdatepassing);
 	}
+	/*public void selectValueOnUsertypeField(String passingusertypevalue) {
+		Select select=new Select(usertypeupdate);
+		select.selectByValue(passingusertypevalue);
+		//tried using value of radio button - PASSED
+	}*/
 	public void selectValueOnUsertypeField(int passingusertypeindex) {
 		Select select=new Select(usertypeupdate);
 		select.selectByIndex(passingusertypeindex);
+		//tried using index of radio button - FAILED 
 	}
 	public void clickOnUpdateButton() {
 		updatebutton.click();
