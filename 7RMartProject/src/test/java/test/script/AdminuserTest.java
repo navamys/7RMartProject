@@ -23,15 +23,12 @@ public class AdminuserTest extends Base{
 		/*String usernameupdatevalue="hellousername";String passwordupdatevalue="hellopassword";int usertypeindex=1; //Will no longer hard code anymore*/
 		String usernameupdatevalue=ExcelUtilities.getStringData(1, 0, "AdminUserPage");
 		String passwordupdatevalue=ExcelUtilities.getStringData(1, 1, "AdminUserPage");
-		//String usertypevalue=ExcelUtilities.getStringData(1, 2, "AdminUserPage");
-		String usertypeindex=ExcelUtilities.getIntegerData(1, 2, "AdminUserPage");
-		int usertypeindexnow=Integer.parseInt(usertypeindex); //doubt-getintegerdata ?
-		
+		String usertypevalue=ExcelUtilities.getStringData(1, 2, "AdminUserPage");
 		adminuserpage.clickOnMoreinfoButton();
 		adminuserpage.clickOnUpdateIcon();
 		adminuserpage.enterValueToBeUpdatedOnUsernameField(usernameupdatevalue);
 		adminuserpage.enterValueToBeUpdatedOnPasswordField(passwordupdatevalue);
-		adminuserpage.selectValueOnUsertypeField(usertypeindexnow);
+		adminuserpage.selectValueOnUsertypeField(usertypevalue);
 		adminuserpage.clickOnUpdateButton();
 		boolean alertdisplayed=adminuserpage.isAlertMessageDisplayed();
 		Assert.assertTrue(alertdisplayed,"Alert not displayed");

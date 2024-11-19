@@ -48,16 +48,16 @@ public class AdminuserPage {
 		passwordupdate.clear();
 		passwordupdate.sendKeys(passwordupdatepassing);
 	}
-	/*public void selectValueOnUsertypeField(String passingusertypevalue) {
+	public void selectValueOnUsertypeField(String passingusertypevalue) {
 		Select select=new Select(usertypeupdate);
 		select.selectByValue(passingusertypevalue);
 		//tried using value of radio button - PASSED
-	}*/
-	public void selectValueOnUsertypeField(int passingusertypeindex) {
+	}
+	/*public void selectValueOnUsertypeField(int passingusertypeindex) {
 		Select select=new Select(usertypeupdate);
 		select.selectByIndex(passingusertypeindex);
-		//tried using index of radio button - FAILED 
-	}
+		//tried using index of radio button - FAILED coz maam told while coding radiobutton, if by index call getintegerdata directly inside parameted, try it plz
+	}*/
 	public void clickOnUpdateButton() {
 		updatebutton.click();
 	}
