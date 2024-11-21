@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.AdminuserPage;
+import pages.LoginPage;
 import utilities.ExcelUtilities;
 
 public class AdminuserTest extends Base{
@@ -14,7 +15,7 @@ public class AdminuserTest extends Base{
 		/*String loginusernamevalue="admin"; String loginpasswordvalue="admin"; //Will no longer hard code anymore*/
 		String loginusernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
 		String loginpasswordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
-		AdminuserPage adminuserpage=new AdminuserPage(driver);
+		AdminuserPage adminuserpage=new AdminuserPage(driver); //can use loginpage by creating its object 
 		adminuserpage.enterUsernameOnUsernameField(loginusernamevalue);
 		adminuserpage.enterPasswordOnPasswordField(loginpasswordvalue);
 		adminuserpage.clickOnSigninButton();

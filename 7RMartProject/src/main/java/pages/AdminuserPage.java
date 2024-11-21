@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import utilities.ExcelUtilities;
+import utilities.PageUtility;
 
 public class AdminuserPage {
 	WebDriver driver;
@@ -53,8 +54,10 @@ public class AdminuserPage {
 		passwordupdate.sendKeys(passwordupdatepassing);
 	}
 	public void selectValueOnUsertypeField(String passingusertypevalue) {
-		Select select=new Select(usertypeupdate);
-		select.selectByValue(passingusertypevalue);
+		//Select select=new Select(usertypeupdate);
+		//select.selectByValue(passingusertypevalue);
+		PageUtility pageutility=new PageUtility();
+		pageutility.selectByValue(usertypeupdate, passingusertypevalue);
 	}
 	public void clickOnUpdateButton() {
 		updatebutton.click();
