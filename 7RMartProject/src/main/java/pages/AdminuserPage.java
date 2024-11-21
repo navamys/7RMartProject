@@ -1,10 +1,14 @@
 package pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import utilities.ExcelUtilities;
 
 public class AdminuserPage {
 	WebDriver driver;
@@ -51,13 +55,7 @@ public class AdminuserPage {
 	public void selectValueOnUsertypeField(String passingusertypevalue) {
 		Select select=new Select(usertypeupdate);
 		select.selectByValue(passingusertypevalue);
-		//tried using value of radio button - PASSED
 	}
-	/*public void selectValueOnUsertypeField(int passingusertypeindex) {
-		Select select=new Select(usertypeupdate);
-		select.selectByIndex(passingusertypeindex);
-		//tried using index of radio button - FAILED coz maam told while coding radiobutton, if by index call getintegerdata directly inside parameted, try it plz
-	}*/
 	public void clickOnUpdateButton() {
 		updatebutton.click();
 	}

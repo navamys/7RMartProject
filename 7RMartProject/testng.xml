@@ -6,7 +6,8 @@
       <class name="test.script.LoginTest">
       <methods>
       <include name="verifyTheUserIsAbleToLoginUsingValidCredentials"> </include> <!--to specify TC -->
-      <include name="verifyTheUserIsAbleToLoginUsingValidUsernameAndIncorrectPassword"> </include>
+      <include name="verifyTheUserIsAbleToLoginUsingValidUsernameAndIncorrectPassword"> </include>  <!--to specify TC -->
+      <!-- just like incclude we have exclude which will execute all TCs except those excluded-->
        </methods>
       </class>
       <!-- <class name="test.script.AdminuserTest"/>
