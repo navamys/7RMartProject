@@ -49,6 +49,7 @@ public class ManageProductPage {
 		title.sendKeys(titlepassing);
 	}
 	public void fileUpload() throws AWTException {
+		
 		FileUploadUtilities fileuploadutilities=new FileUploadUtilities();
 		fileuploadutilities.FileuploadUsingRobotclass(uploadimagebutton, Constants.APPLE_IMAGE);
 	}

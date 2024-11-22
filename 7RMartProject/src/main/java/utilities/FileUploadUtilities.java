@@ -13,6 +13,7 @@ public class FileUploadUtilities {
 		element.sendKeys(path);
 		}
 	public void FileuploadUsingRobotclass(WebElement element,String path) throws AWTException{
+		element.click();
 		StringSelection stringselection =new StringSelection(path);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselection, null); 
 		Robot robot=new Robot();
