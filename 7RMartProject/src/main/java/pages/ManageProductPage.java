@@ -62,9 +62,9 @@ public class ManageProductPage {
 	public void enterValueOnWeightvalueField(String weightvaluepassing) {
 		weightvaluefield.sendKeys(weightvaluepassing);
 	}
-	public void selectWeightunitDropdownValue(String weightunitpassing) {
+	public void selectWeightunitDropdownValue() {
 		PageUtility pageutility=new PageUtility();
-		pageutility.selectByValue(weightunitdropdown, weightunitpassing);
+		pageutility.selectByIndex(weightunitdropdown,1);
 	}
 	public void enterValueOnMaxQuantityField(String maxqtypassing) {
 		maxquantityfield.sendKeys(maxqtypassing);
@@ -77,7 +77,8 @@ public class ManageProductPage {
 	}
 	public void fileUpload() throws AWTException {
 		FileUploadUtilities fileuploadutilities=new FileUploadUtilities();
-		fileuploadutilities.FileuploadUsingRobotclass(uploadimagebutton, Constants.APPLE_IMAGE);
+		//fileuploadutilities.FileuploadUsingRobotclass(uploadimagebutton, Constants.APPLE_IMAGE);
+		fileuploadutilities.fileuploadUsingSendkeys(uploadimagebutton, Constants.APPLE_IMAGE);
 	}
 	public void selectFeaturedRadiobutton() {
 		featuredradio.click();

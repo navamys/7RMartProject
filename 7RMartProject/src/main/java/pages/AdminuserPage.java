@@ -53,11 +53,11 @@ public class AdminuserPage {
 		passwordupdate.clear();
 		passwordupdate.sendKeys(passwordupdatepassing);
 	}
-	public void selectValueOnUsertypeField(String passingusertypevalue) {
+	public void selectValueOnUsertypeField() {
 		//Select select=new Select(usertypeupdate);
 		//select.selectByValue(passingusertypevalue);
 		PageUtility pageutility=new PageUtility();
-		pageutility.selectByValue(usertypeupdate, passingusertypevalue);
+		pageutility.selectByIndex(usertypeupdate, 1);
 	}
 	public void clickOnUpdateButton() {
 		updatebutton.click();

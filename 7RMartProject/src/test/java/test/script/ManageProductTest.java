@@ -21,7 +21,6 @@ public class ManageProductTest extends Base{
 		
 		String titlevalue=ExcelUtilities.getStringData(1, 0,"ManageProductPage");
 		String wightvalue=ExcelUtilities.getIntegerData(1, 1,"ManageProductPage");
-		String wightunit=ExcelUtilities.getStringData(1, 2,"ManageProductPage");
 		String maxqty=ExcelUtilities.getIntegerData(1, 3,"ManageProductPage");
 		String pricevalue=ExcelUtilities.getIntegerData(1, 4,"ManageProductPage");
 		String stockvalue=ExcelUtilities.getIntegerData(1, 5,"ManageProductPage");
@@ -29,7 +28,7 @@ public class ManageProductTest extends Base{
 		manageproductpage.clickOnNewIcon();
 		manageproductpage.enterValueOnTitleField(titlevalue);
 		manageproductpage.enterValueOnWeightvalueField(wightvalue);
-		manageproductpage.selectWeightunitDropdownValue(wightunit);
+		manageproductpage.selectWeightunitDropdownValue();
 		manageproductpage.enterValueOnMaxQuantityField(maxqty);
 		manageproductpage.enterPrice(pricevalue);
 		manageproductpage.enterStock(stockvalue);
