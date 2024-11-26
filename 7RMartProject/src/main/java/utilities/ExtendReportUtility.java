@@ -18,4 +18,4 @@ public class ExtendReportUtility {
 		return extentReports;
 	}
 }
-//once we run, new folder get created-extend report (just like test-output)
+//once we run, new folder get created-extend report named extend-report.html (just like test-output)

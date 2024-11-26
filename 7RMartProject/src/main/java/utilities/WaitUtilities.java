@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtilities {
-	public static final int ImplicitWait=10;  //applicable to all web elements 
+	public static final int IMPLICIT_WAIT=10;  //applicable to all web elements 
 	
 	public static final long EXPLICIT_WAIT = 10;
 	

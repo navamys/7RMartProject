@@ -20,10 +20,11 @@ public class SubcategoryTest extends Base{
 		subcategorypage.enterPasswordOnPasswordField(loginpasswordvalue);
 		subcategorypage.clickOnSigninButton();
 		
-		String categoryvalue=ExcelUtilities.getStringData(1, 0,"SubcategoryPage");
 		String subcategoryvalue=ExcelUtilities.getStringData(1, 1,"SubcategoryPage");
-		subcategorypage.selectValueOnCateforyFieldDropdown(categoryvalue);
-		subcategorypage.selectValueOnSubcateforyFieldDropdown(subcategoryvalue);
+		subcategorypage.clickOnMoreinfobutton();
+		subcategorypage.clickOnNewbutton();
+		subcategorypage.selectValueOnCateforyFieldDropdown();
+		subcategorypage.selectValueOnSubcateforyField(subcategoryvalue);
 		subcategorypage.fileUpload();
 		subcategorypage.clickOnSavebutton();
 		boolean alertdisplayed=subcategorypage.isAlertMessageDisplayed();
@@ -38,10 +39,11 @@ public class SubcategoryTest extends Base{
 		subcategorypage.enterPasswordOnPasswordField(loginpasswordvalue);
 		subcategorypage.clickOnSigninButton();
 		
-		String categoryvalue=ExcelUtilities.getStringData(2, 0,"SubcategoryPage");
 		String subcategoryvalue=ExcelUtilities.getStringData(2, 1,"SubcategoryPage");
-		subcategorypage.selectValueOnCateforyFieldDropdown(categoryvalue);
-		subcategorypage.selectValueOnSubcateforyFieldDropdown(subcategoryvalue);
+		subcategorypage.clickOnMoreinfobutton();
+		subcategorypage.clickOnNewbutton();
+		subcategorypage.selectValueOnCateforyFieldDropdown();
+		subcategorypage.selectValueOnSubcateforyField(subcategoryvalue);
 		subcategorypage.clickOnSavebutton();
 		boolean alertdisplayed=subcategorypage.isAlertMessageDisplayed();
 		Assert.assertTrue(alertdisplayed,"Red error Alert not displayed");

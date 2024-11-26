@@ -51,16 +51,17 @@ public class SubcategoryPage {
 	public void clickOnNewbutton() {
 		newbutton.click();
 	}
-	public void selectValueOnCateforyFieldDropdown(String passingcategoryvalue) {
+	public void selectValueOnCateforyFieldDropdown() {
 		PageUtility pageutility=new PageUtility();
-		pageutility.selectByVisibleText(categoryfield, passingcategoryvalue);
+		pageutility.selectByIndex(categoryfield, 1);
 	}
-	public void selectValueOnSubcateforyFieldDropdown(String passingsubcategoryvalue) {
+	public void selectValueOnSubcateforyField(String passingsubcategoryvalue) {
 		subcategoryfield.sendKeys(passingsubcategoryvalue);
 	}
 	public void fileUpload() throws AWTException {
 		FileUploadUtilities fileuploadutilities=new FileUploadUtilities();
-		fileuploadutilities.FileuploadUsingRobotclass(imageuploadbutton, Constants.GLUCOSE_MONITOR_IMAGE);
+		//fileuploadutilities.FileuploadUsingRobotclass(imageuploadbutton, Constants.GLUCOSE_MONITOR_IMAGE);
+		fileuploadutilities.fileuploadUsingSendkeys(imageuploadbutton, Constants.GLUCOSE_MONITOR_IMAGE);
 	}
 	public void clickOnSavebutton() {
 		savebutton.click();

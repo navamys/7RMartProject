@@ -27,7 +27,7 @@ public class ExcelUtilities {
 		String filepath=Constants.TEST_DATA_FILE; 
  		f=new FileInputStream(filepath); 
 		wb=new XSSFWorkbook(f);
-		sh=wb.getSheet("Sheet1");
+		sh=wb.getSheet(sheet);
 		Row r=sh.getRow(i);
 		Cell c=r.getCell(j);
 		int val=(int)c.getNumericCellValue();
