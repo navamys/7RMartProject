@@ -13,15 +13,16 @@ public class AdminuserTest extends Base{
 	@Test
 	public void updateAllFields() throws IOException {
 		/*String loginusernamevalue="admin"; String loginpasswordvalue="admin"; //Will no longer hard code anymore*/
-		String loginusernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
-		String loginpasswordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
-		AdminuserPage adminuserpage=new AdminuserPage(driver); //can use loginpage by creating its object 
-		adminuserpage.enterUsernameOnUsernameField(loginusernamevalue);
-		adminuserpage.enterPasswordOnPasswordField(loginpasswordvalue);
-		adminuserpage.clickOnSigninButton();
+		String usernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
+		String passwordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.enterUsernameOnUsernameField(usernamevalue);
+		loginpage.enterPasswordOnPasswordField(passwordvalue);
+		loginpage.clickOnSigninButton();
 
 		
 		/*String usernameupdatevalue="hellousername";String passwordupdatevalue="hellopassword";int usertypeindex=1; //Will no longer hard code anymore*/
+		AdminuserPage adminuserpage=new AdminuserPage(driver);
 		String usernameupdatevalue=ExcelUtilities.getStringData(1, 0, "AdminUserPage");
 		String passwordupdatevalue=ExcelUtilities.getStringData(1, 1, "AdminUserPage");
 		adminuserpage.clickOnMoreinfoButton();

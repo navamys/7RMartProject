@@ -22,9 +22,7 @@ public class ManageProductPage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	@FindBy(xpath="//input[@name='username']") private WebElement loginusername;
-	@FindBy(xpath="//input[@name='password']") private WebElement loginpassword;
-	@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
+	
 	
 	@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-product']") private WebElement moreinfobutton;
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Product/add']") private WebElement newicon;
@@ -39,16 +37,7 @@ public class ManageProductPage {
 	@FindBy(xpath="//input[@id='w_stock']") private WebElement stock;
 	@FindBy(xpath="//h5[text()=' Alert!']") private WebElement alertmessage;
 	
-	public void enterUsernameOnUsernameField(String usernamepassing) {
-		loginusername.sendKeys(usernamepassing);
-	}
-	public void enterPasswordOnPasswordField(String passwordpassing) {
-		loginpassword.sendKeys(passwordpassing);
-	}
-	public void clickOnSigninButton() {
-		signinbutton.click();
-	}
-	public void clickOnMoreinfoButton() {
+		public void clickOnMoreinfoButton() {
 		//moreinfobutton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",moreinfobutton);
@@ -81,10 +70,14 @@ public class ManageProductPage {
 		fileuploadutilities.fileuploadUsingSendkeys(uploadimagebutton, Constants.APPLE_IMAGE);
 	}
 	public void selectFeaturedRadiobutton() {
-		featuredradio.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();",featuredradio);
+		//featuredradio.click();
 	}
 	public void clickOnSavebutton() {
-		savebutton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();",savebutton);
+		//savebutton.click();
 	}
 	public boolean isAlertMessageDisplayed() {
 		return alertmessage.isDisplayed();

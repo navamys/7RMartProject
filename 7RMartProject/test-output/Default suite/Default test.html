@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 27 11:45:24 IST 2024</td>
+<td>Started on:</td><td>Fri Nov 29 11:55:47 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (73 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (65 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,10 +76,82 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.script.LoginTest.initializeBrowser()'><b>initializeBrowser</b><br>Test class: test.script.LoginTest</td>
+<td title='test.script.ManageProductTest.driverQuitAndClose()'><b>driverQuitAndClose</b><br>Test class: test.script.ManageProductTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at test.script.Base.driverQuitAndClose(Base.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1042306518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1042306518'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at test.script.Base.driverQuitAndClose(Base.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>test.script.ManageProductTest@1a6d8329</td></tr>
+<tr>
+<td title='test.script.ManageProductTest.initializeBrowser()'><b>initializeBrowser</b><br>Test class: test.script.ManageProductTest</td>
 <td><div><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-1371921121\testng-customsuite.xml
+in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-734089024\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:267)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:684)
@@ -109,10 +181,10 @@ in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-1371921121\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1921242091", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1921242091'><pre>org.testng.TestNGException: 
+</pre></div><a href='#' onClick='toggleBox("stack-trace549293029", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace549293029'><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-1371921121\testng-customsuite.xml
+in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-734089024\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:267)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:684)
@@ -143,22 +215,8 @@ in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-1371921121\testng-customsui
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1732688124</td>
-<td>test.script.LoginTest@7161d8d1</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='test.script.LoginTest.driverQuitAndClose()'><b>driverQuitAndClose</b><br>Test class: test.script.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>test.script.LoginTest@7161d8d1</td></tr>
+<td>-1732861547</td>
+<td>test.script.ManageProductTest@1a6d8329</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -169,10 +227,10 @@ in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-1371921121\testng-customsui
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.script.LoginTest.verifyTheUserIsAbleToLoginUsingValidCredentials()'><b>verifyTheUserIsAbleToLoginUsingValidCredentials</b><br>Test class: test.script.LoginTest</td>
+<td title='test.script.ManageProductTest.createNewProduct()'><b>createNewProduct</b><br>Test class: test.script.ManageProductTest</td>
 <td><div><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-1371921121\testng-customsuite.xml
+in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-734089024\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:267)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:684)
@@ -202,10 +260,10 @@ in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-1371921121\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace896982466", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace896982466'><pre>org.testng.TestNGException: 
+</pre></div><a href='#' onClick='toggleBox("stack-trace605052357", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace605052357'><pre>org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-1371921121\testng-customsuite.xml
+in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-734089024\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:267)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:684)
@@ -237,7 +295,7 @@ in C:\Users\Navamy\AppData\Local\Temp\testng-eclipse-1371921121\testng-customsui
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>test.script.LoginTest@7161d8d1</td></tr>
+<td>test.script.ManageProductTest@1a6d8329</td></tr>
 </table><p>
 </body>
 </html>

@@ -64,7 +64,9 @@ public class SubcategoryPage {
 		fileuploadutilities.fileuploadUsingSendkeys(imageuploadbutton, Constants.GLUCOSE_MONITOR_IMAGE);
 	}
 	public void clickOnSavebutton() {
-		savebutton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();",savebutton);
+		//savebutton.click();
 	}
 	public boolean isAlertMessageDisplayed() {
 		return alertmessage.isDisplayed();

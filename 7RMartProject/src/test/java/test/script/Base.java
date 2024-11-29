@@ -22,7 +22,7 @@ public class Base {
 	public Properties properties;
 	public FileInputStream fileinputstream;
 
-	@BeforeMethod	
+	@BeforeMethod(alwaysRun=true)	
 	@Parameters("browser")
 	public void initializeBrowser(String browser) throws Exception {
 		try {
@@ -32,7 +32,7 @@ public class Base {
 			
 		}
 		catch(Exception e){
-			System.out.println("Error");
+			System.out.println("catch");
 		}
 		//driver=new ChromeDriver();
 		if(browser.equalsIgnoreCase("Chrome")) {
@@ -57,9 +57,9 @@ public class Base {
 		
 		driver.manage().window().maximize();
 	}
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void driverQuitAndClose() {
 		//driver.close();
-		driver.quit();
+		//driver.quit();
 	}
 }

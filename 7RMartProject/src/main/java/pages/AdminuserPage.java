@@ -18,27 +18,14 @@ public class AdminuserPage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	@FindBy(xpath="//input[@name='username']") private WebElement loginusername;
-	@FindBy(xpath="//input[@name='password']") private WebElement loginpassword;
-	@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
-	
 	@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-admin']")private WebElement moreinfobutton;
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10780&page_ad=1']")private WebElement updateicon;
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10816&page_ad=1']")private WebElement updateicon;
 	@FindBy(xpath="//input[@id='username']")private WebElement usernameupdate;
 	@FindBy(xpath="//input[@id='password']")private WebElement passwordupdate;
 	@FindBy(xpath="//select[@id='user_type']")private WebElement usertypeupdate;
 	@FindBy(xpath="//button[@name='Update']")private WebElement updatebutton;
 	@FindBy(xpath="//h5[text()=' Alert!']")private WebElement alertmessage;
 	
-	public void enterUsernameOnUsernameField(String usernamepassing) {
-		loginusername.sendKeys(usernamepassing);
-	}
-	public void enterPasswordOnPasswordField(String passwordpassing) {
-		loginpassword.sendKeys(passwordpassing);
-	}
-	public void clickOnSigninButton() {
-		signinbutton.click();
-	}
 	public void clickOnMoreinfoButton() {
 		moreinfobutton.click();
 	}

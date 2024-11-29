@@ -35,7 +35,7 @@ public class LoginTest extends Base { //test class in src test (have TCs)
 		boolean assertdisplayed=loginpage.isAlertDisplayed();
 		Assert.assertTrue(assertdisplayed,"Alert not displayed");	
 	}
-	@Test
+	@Test(groups= {"regression"})
 	public void verifyTheUserIsAbleToLoginUsingIncorrectUsernameAndValidPassword() throws IOException {
 		//String usernamevalue="dmin";
 		//String passwordvalue="admin";
