@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+<parameter name="browser" value="Chrome"></parameter>
 <listeners>
 <listener class-name="generate.report.Listeners"></listener>
 </listeners>
+
   <test thread-count="5" name="Test"> <!--thread count is no of test cases -->
     <classes>
       <class name="test.script.LoginTest">
@@ -13,7 +15,9 @@
       <!-- just like incclude we have exclude which will execute all TCs except those excluded-->
        </methods>
       </class>
-      <!-- <class name="test.script.AdminuserTest"/>-->
+    <class name="test.script.AdminuserTest">
+   </class>
+      
       
     </classes>
   </test> <!-- Test -->

@@ -5,7 +5,8 @@
 <listeners>
 <listener class-name="generate.report.Listeners"></listener>
 </listeners>
-  <test name="test"> 
+  <test name="test">
+   <!-- class level, parallely executing difft classes's Tcs-->
     <classes>
       <class name="test.script.LoginTest">
       <methods>

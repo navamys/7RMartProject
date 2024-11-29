@@ -9,7 +9,7 @@ import pages.LoginPage;
 import utilities.ExcelUtilities;
 
 public class LoginTest extends Base { //test class in src test (have TCs)
-	@Test(retryAnalyzer=retry.Retry.class)
+	@Test(retryAnalyzer=retry.Retry.class,groups= {"regression"},description="Verifying if the user is able to login using valid credentials")
 	public void verifyTheUserIsAbleToLoginUsingValidCredentials() throws IOException {
 		//String usernamevalue="admin";
 		//String passwordvalue="admin";
@@ -22,7 +22,7 @@ public class LoginTest extends Base { //test class in src test (have TCs)
 		boolean homepageloaded=loginpage.isHomePageDisplayed();
 		Assert.assertTrue(homepageloaded,"Homepage is not loaded when user is entering valid credentials");
 	}
-	@Test
+	@Test(description="verifyTheUserIsAbleToLoginUsingValidUsernameAndIncorrectPassword")
 	public void verifyTheUserIsAbleToLoginUsingValidUsernameAndIncorrectPassword() throws IOException {
 		//String usernamevalue="admin";
 		//String passwordvalue="dmin";
