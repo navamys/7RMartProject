@@ -15,7 +15,7 @@
        </methods>
       </class> -->
       
-    <class name="test.script.ManageContactTest">    </class>
+    <class name="test.script.ManageFooterTest">  </class>
        
     </classes>
   </test> <!-- Test -->

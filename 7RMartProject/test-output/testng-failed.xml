@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="test.script.ManageContactTest">
+      <class name="test.script.ManageFooterTest">
         <methods>
           <include name="driverQuitAndClose"/>
           <include name="initializeBrowser"/>
-          <include name="updateContact"/>
+          <include name="updateFooter"/>
         </methods>
-      </class> <!-- test.script.ManageContactTest -->
+      </class> <!-- test.script.ManageFooterTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
