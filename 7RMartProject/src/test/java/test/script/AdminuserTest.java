@@ -11,7 +11,7 @@ import utilities.ExcelUtilities;
 
 public class AdminuserTest extends Base{
 	@Test
-	public void updateAllFields() throws IOException {
+	public void verifyIfUserIsAbleToUpdateAllFields() throws IOException {
 		/*String loginusernamevalue="admin"; String loginpasswordvalue="admin"; //Will no longer hard code anymore*/
 		String usernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
 		String passwordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");

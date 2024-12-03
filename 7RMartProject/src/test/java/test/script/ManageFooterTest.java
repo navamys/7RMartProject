@@ -12,7 +12,7 @@ import utilities.ExcelUtilities;
 
 public class ManageFooterTest extends Base{
 	@Test
-	public void updateFooter() throws IOException {
+	public void verifyIfUserIsAbleToUpdateFooter() throws IOException {
 		String loginusernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
 		String loginpasswordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
 		LoginPage loginpage=new LoginPage(driver);
@@ -34,7 +34,7 @@ public class ManageFooterTest extends Base{
 		Assert.assertTrue(alertdisplayed,"Alert not displayed");
 	}
 	@Test
-	public void checkPresenceOfUpdatebuttonInManageFooter() throws IOException {
+	public void verifyIfUpdatebuttonIsPresentInManageFooterPage() throws IOException {
 		String loginusernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
 		String loginpasswordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
 		LoginPage loginpage=new LoginPage(driver);

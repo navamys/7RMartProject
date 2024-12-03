@@ -12,7 +12,7 @@ import utilities.ExcelUtilities;
 
 public class ManageProductTest extends Base{
 	@Test
-	public void createNewProduct() throws IOException, AWTException {
+	public void verifyIfUserIsAbleToCreateNewProduct() throws IOException, AWTException {
 		
 		
 		String usernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 

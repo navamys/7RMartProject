@@ -11,7 +11,7 @@ import utilities.ExcelUtilities;
 
 public class ManageContactTest extends Base {
 	@Test
-	public void updateContact() throws IOException {
+	public void VerifyIfUserIsAbleToUpdateContact() throws IOException {
 		String loginusernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
 		String loginpasswordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
 		LoginPage loginpage=new LoginPage(driver);
@@ -39,7 +39,7 @@ public class ManageContactTest extends Base {
 		
 	}
 	@Test
-	public void checkPresenceOfUpdatebuttonInManageContact() throws IOException {
+	public void verifyIfUpdatebuttonIsPresentInManageContactPage() throws IOException {
 		String loginusernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
 		String loginpasswordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
 		LoginPage loginpage=new LoginPage(driver);

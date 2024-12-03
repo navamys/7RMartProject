@@ -12,7 +12,7 @@ import utilities.ExcelUtilities;
 
 public class SubcategoryTest extends Base{
 	@Test
-	public void createSubcategory() throws IOException, AWTException {
+	public void verifyIfUserIsAbleToCreateSubcategory() throws IOException, AWTException {
 		String loginusernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
 		String loginpasswordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
 		SubcategoryPage subcategorypage=new SubcategoryPage(driver);
@@ -31,7 +31,7 @@ public class SubcategoryTest extends Base{
 		Assert.assertTrue(alertdisplayed,"Green success Alert not displayed");
 	}
 	@Test
-	public void createExistingSubcategory() throws IOException, AWTException {
+	public void VerifyIfUserIsNotAbleToCreateExistingSubcategory() throws IOException, AWTException {
 		String loginusernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
 		String loginpasswordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
 		SubcategoryPage subcategorypage=new SubcategoryPage(driver);
