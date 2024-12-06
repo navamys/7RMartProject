@@ -12,10 +12,10 @@ import com.aventstack.extentreports.Status;
 import utilities.ExtendReportUtility;
 
 public class Listeners implements ITestListener {
+	//Listeners class: it implement ItestListener interface, used to customize report. 
 	 ExtentTest test;
-	 
-	 	ExtentReports extent = ExtendReportUtility.createExtentReports(); 
-	 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>(); 
+	 ExtentReports extent = ExtendReportUtility.createExtentReports(); 
+	 ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>(); 
 	  
 	 	public void onTestStart(ITestResult result) { 
 	  //once TC run starts, will listen ITestListener console and fetch name of TC and add to report
