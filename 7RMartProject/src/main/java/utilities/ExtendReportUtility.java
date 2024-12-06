@@ -6,7 +6,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 public class ExtendReportUtility {
 	//is a custom report
 	public static final ExtentReports extentReports = new ExtentReports();
-	
+	//this method returns a report
 	public synchronized static ExtentReports createExtentReports() {
 		//aventstack will provide required classes and interfaces
 		ExtentSparkReporter reporter = new ExtentSparkReporter("./extent-reports/extent-report.html");
