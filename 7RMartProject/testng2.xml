@@ -15,7 +15,7 @@
        </methods>
       </class> -->
       
-    <class name="test.script.LoginTest">  </class>
+    <class name="test.script.HomeTest"> </class>
        
     </classes>
   </test> <!-- Test -->
