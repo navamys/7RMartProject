@@ -25,7 +25,7 @@ public class ScreenshotUtility {
  		String destination = System.getProperty("user.dir") + "//outputScreenShot//" + failedTestCase + timeStamp + ".png"; 
  		File finalDestination = new File(destination); 
  		FileHandler.copy(screenShot, finalDestination);
- 		
+ 		// Used to take screenshot of current situation of driver.
  		//TakesScreenshot is an interface
  	}
 }
