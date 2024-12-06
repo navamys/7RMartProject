@@ -24,7 +24,7 @@ public class ManageProductPage {
 	}
 	
 	
-	@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-product']") private WebElement moreinfobutton;
+	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Product/add']") private WebElement newicon;
 	@FindBy(xpath="//input[@id='title']") private WebElement title;
 	@FindBy(xpath="//input[@id='main_img']") private WebElement uploadimagebutton; 
@@ -37,47 +37,53 @@ public class ManageProductPage {
 	@FindBy(xpath="//input[@id='w_stock']") private WebElement stock;
 	@FindBy(xpath="//h5[text()=' Alert!']") private WebElement alertmessage;
 	
-		public void clickOnMoreinfoButton() {
-		//moreinfobutton.click();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();",moreinfobutton);
-	}
-	public void clickOnNewIcon() {
+		
+	public ManageProductPage clickOnNewIcon() {
 		newicon.click();
+		return this;
 	}
-	public void enterValueOnTitleField(String titlepassing) {
+	public ManageProductPage enterValueOnTitleField(String titlepassing) {
 		title.sendKeys(titlepassing);
+		return this;
 	}
-	public void enterValueOnWeightvalueField(String weightvaluepassing) {
+	public ManageProductPage enterValueOnWeightvalueField(String weightvaluepassing) {
 		weightvaluefield.sendKeys(weightvaluepassing);
+		return this;
 	}
-	public void selectWeightunitDropdownValue() {
+	public ManageProductPage selectWeightunitDropdownValue() {
 		PageUtility pageutility=new PageUtility();
 		pageutility.selectByIndex(weightunitdropdown,1);
+		return this;
 	}
-	public void enterValueOnMaxQuantityField(String maxqtypassing) {
+	public ManageProductPage enterValueOnMaxQuantityField(String maxqtypassing) {
 		maxquantityfield.sendKeys(maxqtypassing);
+		return this;
 	}
-	public void enterPrice(String pricepasssing) {
+	public ManageProductPage enterPrice(String pricepasssing) {
 		price.sendKeys(pricepasssing);
+		return this;
 	}
-	public void enterStock(String stockpasssing) {
+	public ManageProductPage enterStock(String stockpasssing) {
 		stock.sendKeys(stockpasssing);
+		return this;
 	}
-	public void fileUpload() throws AWTException {
+	public ManageProductPage fileUpload() throws AWTException {
 		FileUploadUtilities fileuploadutilities=new FileUploadUtilities();
 		//fileuploadutilities.FileuploadUsingRobotclass(uploadimagebutton, Constants.APPLE_IMAGE);
 		fileuploadutilities.fileuploadUsingSendkeys(uploadimagebutton, Constants.APPLE_IMAGE);
+		return this;
 	}
-	public void selectFeaturedRadiobutton() {
+	public ManageProductPage selectFeaturedRadiobutton() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",featuredradio);
+		return this;
 		//featuredradio.click();
 	}
-	public void clickOnSavebutton() {
+	public ManageProductPage clickOnSavebutton() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",savebutton);
 		//savebutton.click();
+		return this;
 	}
 	public boolean isAlertMessageDisplayed() {
 		return alertmessage.isDisplayed();

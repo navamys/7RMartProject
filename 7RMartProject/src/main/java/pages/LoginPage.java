@@ -24,14 +24,17 @@ public class LoginPage{  //page class also called element repo(have methods and 
 	
 	
 	
-	public void enterUsernameOnUsernameField(String usernamepassing) {
+	public LoginPage enterUsernameOnUsernameField(String usernamepassing) {
 		username.sendKeys(usernamepassing);
+		return this;
 	}
-	public void enterPasswordOnPasswordField(String passwordpassing) {
+	public LoginPage enterPasswordOnPasswordField(String passwordpassing) {
 		password.sendKeys(passwordpassing);
+		return this;
 	}
-	public void clickOnSigninButton() {
+	public HomePage clickOnSigninButton() {
 		signinbutton.click();
+		return new HomePage(driver);
 	}	
 	public boolean isHomePageDisplayed() {
 		return dashboard.isDisplayed();

@@ -18,7 +18,7 @@ public class AdminuserPage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-admin']")private WebElement moreinfobutton;
+	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10816&page_ad=1']")private WebElement updateicon;
 	@FindBy(xpath="//input[@id='username']")private WebElement usernameupdate;
 	@FindBy(xpath="//input[@id='password']")private WebElement passwordupdate;
@@ -26,28 +26,31 @@ public class AdminuserPage {
 	@FindBy(xpath="//button[@name='Update']")private WebElement updatebutton;
 	@FindBy(xpath="//h5[text()=' Alert!']")private WebElement alertmessage;
 	
-	public void clickOnMoreinfoButton() {
-		moreinfobutton.click();
-	}
-	public void clickOnUpdateIcon() {
+	
+	public AdminuserPage clickOnUpdateIcon() {
 		updateicon.click();
+		return this; //return this page
 	}
-	public void enterValueToBeUpdatedOnUsernameField(String usernameupdatepassing) {
+	public AdminuserPage enterValueToBeUpdatedOnUsernameField(String usernameupdatepassing) {
 		usernameupdate.clear();
 		usernameupdate.sendKeys(usernameupdatepassing);
+		return this;
 	}
-	public void enterValueToBeUpdatedOnPasswordField(String passwordupdatepassing) {
+	public AdminuserPage enterValueToBeUpdatedOnPasswordField(String passwordupdatepassing) {
 		passwordupdate.clear();
 		passwordupdate.sendKeys(passwordupdatepassing);
+		return this;
 	}
-	public void selectValueOnUsertypeField() {
+	public AdminuserPage selectValueOnUsertypeField() {
 		//Select select=new Select(usertypeupdate);
 		//select.selectByValue(passingusertypevalue);
 		PageUtility pageutility=new PageUtility();
 		pageutility.selectByIndex(usertypeupdate, 1);
+		return this;
 	}
-	public void clickOnUpdateButton() {
+	public AdminuserPage clickOnUpdateButton() {
 		updatebutton.click();
+		return this;
 	}
 	public boolean isAlertMessageDisplayed() {
 		return alertmessage.isDisplayed();

@@ -22,8 +22,6 @@ public class LoginTest extends Base { //test class in src test (have TCs)
 		loginpage.clickOnSigninButton();
 		boolean homepageloaded=loginpage.isHomePageDisplayed();
 		Assert.assertTrue(homepageloaded,"Homepage is not loaded when user is entering valid credentials");
-		
-		
 	}
 	@Test(description="verifyTheUserIsAbleToLoginUsingValidUsernameAndIncorrectPassword")
 	public void verifyTheUserIsAbleToLoginUsingValidUsernameAndIncorrectPassword() throws IOException {

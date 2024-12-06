@@ -16,7 +16,7 @@ public class ManageContactPage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-contact']") private WebElement moreinfobutton ;
+	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/contact/edit_contact?edit=1']") private WebElement updateicon ;
 	@FindBy(xpath="//input[@id='phone']") private WebElement phonefield ;
 	@FindBy(xpath="//input[@id='email']") private WebElement emailfield ;
@@ -26,36 +26,41 @@ public class ManageContactPage {
 	@FindBy(xpath="//button[@type='submit']") private WebElement updatebutton ;
 	@FindBy(xpath="//h5[text()=' Alert!']") private WebElement alertmessage;
 	
-	public void clickOnMoreinfobutton() {
-		moreinfobutton.click();
-	}
-	public void clickOnUpdateicon() {
+	
+	public ManageContactPage clickOnUpdateicon() {
 		updateicon.click();
+		return this;
 	}
-	public void enterPhonenumber(String passphonenumber) {
+	public ManageContactPage enterPhonenumber(String passphonenumber) {
 		phonefield.clear();
 		phonefield.sendKeys(passphonenumber);
+		return this;
 	}
-	public void enterEmail(String passingemail) {
+	public ManageContactPage enterEmail(String passingemail) {
 		emailfield.clear();
 		emailfield.sendKeys(passingemail);
+		return this;
 	}
-	public void enterAddress(String passingaddress) {
+	public ManageContactPage enterAddress(String passingaddress) {
 		addressfield.clear();
 		addressfield.sendKeys(passingaddress);
+		return this;
 	}
-	public void enterDeliveryTime(String passingdeliverytime) {
+	public ManageContactPage enterDeliveryTime(String passingdeliverytime) {
 		deliverytimefield.clear();
 		deliverytimefield.sendKeys(passingdeliverytime);
+		return this;
 	}
-	public void enterDeliveryCharge(String passingdeliverycharge) {
+	public ManageContactPage enterDeliveryCharge(String passingdeliverycharge) {
 		deliverychargefield.clear();
 		deliverychargefield.sendKeys(passingdeliverycharge);
+		return this;
 	}
-	public void clickOnUpdatebutton() {
+	public ManageContactPage clickOnUpdatebutton() {
 		//updatebutton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",updatebutton);
+		return this;
 	}
 	public boolean isAlertMessageDisplayed() {
 		return alertmessage.isDisplayed();

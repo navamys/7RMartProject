@@ -15,30 +15,25 @@ public class ManageNewsPage {
 	}
 	
 	
-	@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-news']") private WebElement moreinfobutton;
+	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/news/add']") private WebElement newbutton;
 	@FindBy(xpath="//textarea[@id='news']") private WebElement newsfield;
 	@FindBy(xpath="//button[@type='submit']") private WebElement savebutton;
 	@FindBy(xpath="//h5[text()=' Alert!']") private WebElement alertmessage;
 	
 	
-	public void clickOnMoreinfoButton() {
-		//JavascriptExecutor js = (JavascriptExecutor) driver; 
-		//js.executeScript("window.scrollBy(0,150)", ""); 
-		//js.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
-		//these three lines for scrolling down, but not needed now
-		//moreinfobutton.click();  //here usual click wont work, hence used js
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();",moreinfobutton);
-	}
-	public void clickOnNewButton() {
+	
+	public ManageNewsPage clickOnNewButton() {
 		newbutton.click();
+		return this;
 	}
-	public void enterNewsOnNewsField(String news) {
+	public ManageNewsPage enterNewsOnNewsField(String news) {
 		newsfield.sendKeys(news);
+		return this;
 	}
-	public void clickOnSavebutton() {
+	public ManageNewsPage clickOnSavebutton() {
 		savebutton.click();
+		return this;
 	}
 	public boolean isAlertMessageDisplayed() {
 		return alertmessage.isDisplayed();
