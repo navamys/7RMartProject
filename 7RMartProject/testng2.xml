@@ -15,8 +15,8 @@
        </methods>
       </class> -->
       
-    <class name="test.script.HomeTest"> </class>
+    <class name="test.script.AdminuserTest"> </class>
        
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+</suite> 

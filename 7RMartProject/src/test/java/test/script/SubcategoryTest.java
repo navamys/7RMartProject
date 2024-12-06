@@ -6,27 +6,26 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pages.HomePage;
+import pages.LoginPage;
 import pages.ManageNewsPage;
 import pages.SubcategoryPage;
 import utilities.ExcelUtilities;
 
 public class SubcategoryTest extends Base{
+	HomePage homepage;
+	SubcategoryPage subcategorypage;
 	@Test
 	public void verifyIfUserIsAbleToCreateSubcategory() throws IOException, AWTException {
 		String loginusernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
 		String loginpasswordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
-		SubcategoryPage subcategorypage=new SubcategoryPage(driver);
-		subcategorypage.enterUsernameOnUsernameField(loginusernamevalue);
-		subcategorypage.enterPasswordOnPasswordField(loginpasswordvalue);
-		subcategorypage.clickOnSigninButton();
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.enterUsernameOnUsernameField(loginusernamevalue).enterPasswordOnPasswordField(loginpasswordvalue);
+		homepage=loginpage.clickOnSigninButton();
 		
 		String subcategoryvalue=ExcelUtilities.getStringData(1, 1,"SubcategoryPage");
-		subcategorypage.clickOnMoreinfobutton();
-		subcategorypage.clickOnNewbutton();
-		subcategorypage.selectValueOnCateforyFieldDropdown();
-		subcategorypage.selectValueOnSubcateforyField(subcategoryvalue);
-		subcategorypage.fileUpload();
-		subcategorypage.clickOnSavebutton();
+		subcategorypage=homepage.clickOnSubcategoryMoreinfobutton();
+		subcategorypage.clickOnNewbutton().selectValueOnCateforyFieldDropdown().selectValueOnSubcateforyField(subcategoryvalue).fileUpload().clickOnSavebutton();
 		boolean alertdisplayed=subcategorypage.isAlertMessageDisplayed();
 		Assert.assertTrue(alertdisplayed,"Green success Alert not displayed");
 	}
@@ -34,17 +33,15 @@ public class SubcategoryTest extends Base{
 	public void VerifyIfUserIsNotAbleToCreateExistingSubcategory() throws IOException, AWTException {
 		String loginusernamevalue=ExcelUtilities.getStringData(1, 0,"LoginPage"); 
 		String loginpasswordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
-		SubcategoryPage subcategorypage=new SubcategoryPage(driver);
-		subcategorypage.enterUsernameOnUsernameField(loginusernamevalue);
-		subcategorypage.enterPasswordOnPasswordField(loginpasswordvalue);
-		subcategorypage.clickOnSigninButton();
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.enterUsernameOnUsernameField(loginusernamevalue).enterPasswordOnPasswordField(loginpasswordvalue);
+		homepage=loginpage.clickOnSigninButton();
+		
 		
 		String subcategoryvalue=ExcelUtilities.getStringData(2, 1,"SubcategoryPage");
-		subcategorypage.clickOnMoreinfobutton();
-		subcategorypage.clickOnNewbutton();
-		subcategorypage.selectValueOnCateforyFieldDropdown();
-		subcategorypage.selectValueOnSubcateforyField(subcategoryvalue);
-		subcategorypage.clickOnSavebutton();
+		SubcategoryPage subcategorypage=new SubcategoryPage(driver);
+		subcategorypage=homepage.clickOnSubcategoryMoreinfobutton();
+		subcategorypage.clickOnNewbutton().selectValueOnCateforyFieldDropdown().selectValueOnSubcateforyField(subcategoryvalue).clickOnSavebutton();
 		boolean alertdisplayed=subcategorypage.isAlertMessageDisplayed();
 		Assert.assertTrue(alertdisplayed,"Red error Alert not displayed");
 	}

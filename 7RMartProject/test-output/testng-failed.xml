@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="test.script.LoginTest">
+      <class name="test.script.AdminuserTest">
         <methods>
           <include name="initializeBrowser"/>
           <include name="browserQuit"/>
-          <include name="verifyTheUserIsAbleToLoginUsingValidCredentials"/>
+          <include name="verifyIfUserIsAbleToUpdateAllFields"/>
         </methods>
-      </class> <!-- test.script.LoginTest -->
+      </class> <!-- test.script.AdminuserTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

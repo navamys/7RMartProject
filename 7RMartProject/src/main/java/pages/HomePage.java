@@ -23,18 +23,21 @@ public class HomePage {
 	@FindBy(css="a.dropdown-item[href='https://groceryapp.uniqassosiates.com/admin/logout']")private WebElement logoutbutton;
 	@FindBy(xpath="//button[@type='submit']")private WebElement signinbutton;
 	
-	public void clickOnAdminMoreinfoButton() {
+	public AdminuserPage clickOnAdminMoreinfoButton() {
 		adminmoreinfobutton.click();
+		return new AdminuserPage(driver);
 	}
-	public void clickOnContactMoreinfobutton() {
+	public ManageContactPage clickOnContactMoreinfobutton() {
 		contactmoreinfobutton.click();
+		return new ManageContactPage(driver);
 	}
-	public void clickOnFooterMoreinfobutton() {
+	public ManageFooterPage clickOnFooterMoreinfobutton() {
 		//moreinfobutton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",footermoreinfobutton);
+		return new ManageFooterPage(driver);
 	}
-	public void clickOnNewsMoreinfoButton() {
+	public ManageNewsPage clickOnNewsMoreinfoButton() {
 		//JavascriptExecutor js = (JavascriptExecutor) driver; 
 		//js.executeScript("window.scrollBy(0,150)", ""); 
 		//js.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
@@ -42,16 +45,19 @@ public class HomePage {
 		//moreinfobutton.click();  //here usual click wont work, hence used js
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",newsmoreinfobutton);
+		return new ManageNewsPage(driver);
 	}
-	public void clickOnProductMoreinfoButton() {
+	public ManageProductPage clickOnProductMoreinfoButton() {
 		//moreinfobutton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",productmoreinfobutton);
+		return new ManageProductPage(driver);
 	}
-	public void clickOnSubcategoryMoreinfobutton() {
+	public SubcategoryPage clickOnSubcategoryMoreinfobutton() {
 		//moreinfobutton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();",subcategorymoreinfobutton);
+		return new SubcategoryPage(driver);
 	}
 	public void clickOnAdminimagebutton() {
 		adminimagebutton.click();

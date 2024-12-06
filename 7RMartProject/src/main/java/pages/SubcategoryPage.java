@@ -22,10 +22,6 @@ public class SubcategoryPage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	@FindBy(xpath="//input[@name='username']") private WebElement loginusername;
-	@FindBy(xpath="//input[@name='password']") private WebElement loginpassword;
-	@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
-	
 	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Subcategory/add']") private WebElement newbutton;
 	@FindBy(xpath="//select[@id='cat_id']") private WebElement categoryfield;
@@ -34,18 +30,6 @@ public class SubcategoryPage {
 	@FindBy(xpath="	//button[@type='submit']") private WebElement savebutton;
 	@FindBy(xpath="//h5[text()=' Alert!']") private WebElement alertmessage;
 	
-	public SubcategoryPage enterUsernameOnUsernameField(String usernamepassing) {
-		loginusername.sendKeys(usernamepassing);
-		return this;
-	}
-	public SubcategoryPage enterPasswordOnPasswordField(String passwordpassing) {
-		loginpassword.sendKeys(passwordpassing);
-		return this;
-	}
-	public SubcategoryPage clickOnSigninButton() {
-		signinbutton.click();
-		return this;
-	}
 	
 	public SubcategoryPage clickOnNewbutton() {
 		newbutton.click();
