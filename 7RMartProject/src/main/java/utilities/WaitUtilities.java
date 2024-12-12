@@ -8,12 +8,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtilities {
-	public static final int IMPLICIT_WAIT=10;  //applicable to all web elements 
-	
+	// we have 3 wait mechanisms,But in this project we have used 2, implicit and
+	// explicit.
+	// Implicit wait given in src test java(tesclass, /base).
+	// Explicit in src main java(page class)
+	public static final int IMPLICIT_WAIT = 10; // applicable to all web elements
+
 	public static final long EXPLICIT_WAIT = 10;
-	
-	public void waitForElementToBeClickable(WebDriver driver,WebElement element) {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
-	    wait.until(ExpectedConditions.elementToBeClickable(element));
+
+	public void waitForElementToBeClickable(WebDriver driver, WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 }
