@@ -24,7 +24,6 @@ public class Base {
 	public WebDriver driver;
 	public Properties properties;
 	public FileInputStream fileinputstream;
-
 	public ScreenshotUtility scrshot;
 
 	@BeforeMethod(alwaysRun = true) // for grouping to run

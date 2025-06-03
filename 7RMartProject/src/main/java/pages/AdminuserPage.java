@@ -12,7 +12,7 @@ import utilities.ExcelUtilities;
 import utilities.PageUtility;
 
 public class AdminuserPage {
-	// design used page factory for finding elements(@finfby annotation is used to
+	// design used page factory for finding elements(@findby annotation is used to
 	// locate web elements),
 	// automate page by page, each page have page class and test class.
 	// page class(element repo) have methods and elements

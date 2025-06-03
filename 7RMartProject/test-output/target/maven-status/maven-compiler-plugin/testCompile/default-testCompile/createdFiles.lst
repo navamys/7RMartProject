@@ -1,0 +1,10 @@
+test\script\ManageProductTest.class
+test\script\Base.class
+test\script\LoginTest.class
+test\script\ManageFooterTest.class
+test\script\ManageNewsTest.class
+generate\report\Listeners.class
+test\script\AdminuserTest.class
+test\script\ManageContactTest.class
+test\script\SubcategoryTest.class
+retry\Retry.class

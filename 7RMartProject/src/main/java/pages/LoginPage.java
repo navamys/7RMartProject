@@ -15,12 +15,9 @@ public class LoginPage { // page class also called element repo(have methods and
 	}
 
 	// pom(page object model) with page factory(@FindBy). Design is 'page by page'
-	// WebElement
-	// username=driver.findElement(By.xpath("//input[@name='username']"));
-	// WebElement
-	// password=driver.findElement(By.xpath("//input[@name='password']"));
-	// WebElement
-	// signinbutton=driver.findElement(By.xpath("//button[@type='submit']"));
+	// WebElement username=driver.findElement(By.xpath("//input[@name='username']"));
+	// WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
+	// WebElement signinbutton=driver.findElement(By.xpath("//button[@type='submit']"));
 	// WebElement dashboard=driver.findElement(By.xpath("//p[text()='Dashboard']"));
 	@FindBy(xpath = "//input[@name='username']")
 	private WebElement username;

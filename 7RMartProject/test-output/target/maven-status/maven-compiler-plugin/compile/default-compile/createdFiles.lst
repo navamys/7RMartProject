@@ -1,0 +1,14 @@
+pages\AdminuserPage.class
+pages\LoginPage.class
+utilities\ScreenshotUtility.class
+utilities\ExtendReportUtility.class
+utilities\PageUtility.class
+pages\ManageFooterPage.class
+pages\ManageContactPage.class
+utilities\ExcelUtilities.class
+utilities\FileUploadUtilities.class
+pages\ManageProductPage.class
+pages\ManageNewsPage.class
+utilities\WaitUtilities.class
+constants\Constants.class
+pages\SubcategoryPage.class

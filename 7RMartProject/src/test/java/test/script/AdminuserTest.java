@@ -50,7 +50,7 @@ public class AdminuserTest extends Base {
 		 * adminuserpage.enterValueToBeUpdatedOnPasswordField(passwordupdatevalue);
 		 * adminuserpage.selectValueOnUsertypeField();
 		 * adminuserpage.clickOnUpdateButton();
-		 */ // wrote in single line aabove
+		 */ // wrote in single line above
 		boolean alertdisplayed = adminuserpage.isAlertMessageDisplayed();
 		Assert.assertTrue(alertdisplayed, Constants.ADMINUSER_MESSAGE);
 	}
